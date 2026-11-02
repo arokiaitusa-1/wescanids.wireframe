@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WE SCAN | Smarter ID Verification &amp; Responsible Service Platform</title>
+  <title>WE SCAN | Protect Your License. Keep Service Moving.</title>
   <meta name="description"
-    content="WE SCAN helps businesses selling alcohol, tobacco and other age-restricted products simplify ID verification, support responsible service and protect their operations.">
+    content="Connect your POS, scan IDs in seconds and keep age-restricted sales moving with WE SCAN's intelligent verification and responsible service solutions.">
   <link rel="icon" type="image/png" href="assets/we-scan-logo-sm.png">
 
   <!-- Google Font: Inter – Modern Premium B2B Sans-Serif -->
@@ -20,8 +20,6 @@
 </head>
 
 <body>
-
-
 
   <!-- =========================================================================
        SECTION 1: HEADER & NAVIGATION
@@ -37,8 +35,8 @@
       <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-list">
           <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
-          <li class="nav-item"><a href="#benefits" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#benefits" class="nav-link">Benefits</a></li>
+          <li class="nav-item"><a href="#pos-integrations" class="nav-link">POS Integrations</a></li>
+          <li class="nav-item"><a href="#industries" class="nav-link">Industries</a></li>
           <li class="nav-item">
             <a href="#solutions" class="nav-link">
               Solutions
@@ -47,20 +45,16 @@
               </svg>
             </a>
             <ul class="nav-dropdown">
-              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Responsible Service
-                  Program</a></li>
-              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Automated Age
-                  Verification</a></li>
-              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Private Club
-                  Management</a></li>
-              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>ID Scanner for Liquor
-                  Stores</a></li>
-              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>ID Scanning for Age
-                  Verification</a></li>
+              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Responsible Service Program</a></li>
+              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Automated Age Verification</a></li>
+              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>Private Club Management</a></li>
+              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>ID Scanner for Liquor Stores</a></li>
+              <li><a href="#solutions" class="dropdown-link"><span class="dropdown-bullet"></span>ID Scanning for Age Verification</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#integrations" class="nav-link">Integration Partners</a></li>
-          <li class="nav-item"><a href="#industries" class="nav-link">Industries</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li class="nav-item"><a href="#demo-video" class="nav-link">Product Demo</a></li>
+          <li class="nav-item"><a href="#benefits" class="nav-link">Benefits</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -90,11 +84,12 @@
     </div>
     <ul class="mobile-nav-list">
       <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#pos-integrations" class="mobile-nav-link">POS Integrations</a></li>
+      <li><a href="#industries" class="mobile-nav-link">Industries</a></li>
       <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
       <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+      <li><a href="#demo-video" class="mobile-nav-link">Product Demo</a></li>
       <li><a href="#benefits" class="mobile-nav-link">Benefits</a></li>
-      <li><a href="#integrations" class="mobile-nav-link">Integration Partners</a></li>
-      <li><a href="#industries" class="mobile-nav-link">Industries</a></li>
       <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
       <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
     </ul>
@@ -105,15 +100,19 @@
   </aside>
 
   <!-- =========================================================================
-       SECTION 2: HERO – Cinematic, Full Viewport
+       SECTION 2: HERO – Full Viewport with Background Video
+       Headline: "Protect Your License. Keep Service Moving."
        ========================================================================= -->
   <section class="hero-section" id="hero">
-
-
-    <!-- Background Image Layer -->
+    <!-- Background Video Layer with Poster Fallback -->
     <div class="hero-bg-media">
-      <img src="assets/hero-bar-bg.jpg" alt="Premium hospitality and bar environment" width="1920" height="1080">
+      <video autoplay muted loop playsinline poster="assets/hero-bar-bg.jpg" class="hero-bg-video" id="heroBgVideo" aria-hidden="true">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+        <!-- Static background image fallback for unsupported browsers -->
+        <img src="assets/hero-bar-bg.jpg" alt="WE SCAN bar and hospitality verification" width="1920" height="1080">
+      </video>
     </div>
+    <!-- Dark, subtle overlay to maintain crisp typography readability -->
     <div class="hero-overlay"></div>
 
     <div class="elementor-container hero-container">
@@ -123,17 +122,15 @@
           <span>Risk Management &amp; Age Verification</span>
         </div>
         <h1 class="hero-title">
-          Smarter ID Verification.<br>
-          <span class="highlight">Responsible Service.</span><br>
-          Stronger Business Protection.
+          Protect Your License.<br>
+          <span class="highlight">Keep Service Moving.</span>
         </h1>
         <p class="hero-description">
-          WE SCAN helps businesses selling alcohol, tobacco and age-restricted products simplify ID verification,
-          enforce responsible service and protect their liquor licenses.
+          Connect your POS, scan IDs in seconds and keep age-restricted sales moving with WE SCAN's intelligent verification and responsible service solutions.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary btn-xl" data-open-demo-modal>Request a Demo</a>
-          <a href="#solutions" class="btn btn-ghost-white btn-xl">Explore Solutions</a>
+          <a href="#how-it-works" class="btn btn-ghost-white btn-xl">See How It Works</a>
         </div>
         <div class="hero-trust-bar">
           <div class="hero-trust-item">
@@ -160,35 +157,89 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 3: TECHNOLOGY & PARTNER LOGOS
-       "Technology That Works With Platforms" – Prominently sized logos
-       "Trusted Leading Venues" – Prominently sized venue logos
+       SECTION 3: POS INTEGRATION BUTTONS – Directly Below Hero
+       Heading: "Works With the POS Platforms You Already Use."
+       Toast POS, Oracle MICROS, Aloha POS
        ========================================================================= -->
-  <section class="partners-section" id="partners">
-
-
+  <section class="pos-platforms-section" id="pos-integrations">
     <div class="elementor-container">
-
-      <!-- Integration Partners Heading -->
-      <p class="partners-label">Technology That Works With the Platforms You Use</p>
-
-      <!-- Integration Partner Logos: Medium-sized, clearly visible, properly spaced -->
-      <div class="integration-logos-row">
-        <div class="integration-logo-item" title="Toast POS Integration">
-          <img src="assets/t-w.jpg" alt="Toast and WE SCAN Integration Partner" width="180" height="48">
-        </div>
-        <div class="integration-logo-item" title="NCR Voyix Integration">
-          <img src="assets/n-w.jpg" alt="NCR Voyix and WE SCAN Integration Partner" width="180" height="48">
-        </div>
-        <div class="integration-logo-item" title="Oracle MICROS Integration">
-          <img src="assets/o-w.jpg" alt="Oracle MICROS and WE SCAN Integration Partner" width="180" height="48">
-        </div>
+      <div class="pos-platforms-header reveal">
+        <span class="section-tag">POS Integrations</span>
+        <h2 class="pos-platforms-title">Works With the POS Platforms You Already Use.</h2>
+        <p class="pos-platforms-subtitle">
+          Direct, verified integrations connect WE SCAN straight to your existing point of sale terminals, mobile handhelds, and checkout stations.
+        </p>
       </div>
 
-      <!-- Divider -->
-      <hr class="venues-divider">
+      <div class="pos-platforms-grid">
+        <!-- Button 1: Toast POS -->
+        <a href="#integrations" class="pos-platform-card reveal reveal-delay-1" title="Explore Toast POS Integration">
+          <div class="pos-platform-logo-wrap">
+            <img src="assets/t-w.jpg" alt="Toast POS Integration" width="180" height="48">
+          </div>
+          <div class="pos-platform-body">
+            <div class="pos-platform-meta">
+              <h3 class="pos-platform-name">Toast POS</h3>
+              <span class="pos-badge pos-badge-toast">Certified Integration</span>
+            </div>
+            <p class="pos-platform-desc">Tableside scanning on Toast Go® 3 and countertop terminal sync.</p>
+            <div class="pos-platform-action">
+              <span>View Toast Details</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
 
-      <!-- Trusted Venues Label -->
+        <!-- Button 2: Oracle MICROS -->
+        <a href="#integrations" class="pos-platform-card reveal reveal-delay-2" title="Explore Oracle MICROS Integration">
+          <div class="pos-platform-logo-wrap">
+            <img src="assets/o-w.jpg" alt="Oracle MICROS Integration" width="180" height="48">
+          </div>
+          <div class="pos-platform-body">
+            <div class="pos-platform-meta">
+              <h3 class="pos-platform-name">Oracle MICROS</h3>
+              <span class="pos-badge pos-badge-oracle">Verified Integration</span>
+            </div>
+            <p class="pos-platform-desc">Enterprise Simphony workflow prompts and central compliance rules.</p>
+            <div class="pos-platform-action">
+              <span>View Oracle Details</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Button 3: Aloha POS -->
+        <a href="#integrations" class="pos-platform-card reveal reveal-delay-3" title="Explore Aloha POS Integration">
+          <div class="pos-platform-logo-wrap">
+            <img src="assets/n-w.jpg" alt="Aloha POS Integration" width="180" height="48">
+          </div>
+          <div class="pos-platform-body">
+            <div class="pos-platform-meta">
+              <h3 class="pos-platform-name">Aloha POS</h3>
+              <span class="pos-badge pos-badge-aloha">NCR Voyix Aloha</span>
+            </div>
+            <p class="pos-platform-desc">Native OrderPay and register validation with sub-second patron checks.</p>
+            <div class="pos-platform-action">
+              <span>View Aloha Details</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: TRUSTED BY LEADING VENUES – Customer Logo Carousel
+       ========================================================================= -->
+  <section class="venues-section" id="venues">
+    <div class="elementor-container">
       <p class="venues-label">Trusted By Leading Venues</p>
 
       <!-- Venue Logos: Infinite Auto-Scroll Marquee Carousel -->
@@ -234,24 +285,139 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 4: SOLUTIONS – Core Platform Services
-       Desktop: 3 on row 1, 2 on row 2 centered. Tablet: 2 cols. Mobile: 1 col.
+       SECTION 5: BUSINESS TYPES / INDUSTRIES – Directly Below Client Logos
+       Heading: "Built for Every Age-Restricted Business."
+       Image-led cards: Bars/Rest, Nightclubs, Private Clubs, Liquor Stores, Other
+       ========================================================================= -->
+  <section class="industries-section" id="industries">
+    <div class="elementor-container">
+      <div class="section-header reveal">
+        <span class="section-tag">Industry Focus</span>
+        <h2 class="section-title">Built for Every Age-Restricted Business.</h2>
+        <p class="section-subtitle">
+          Engineered for high-volume dining, fast-paced nightlife door queues, private clubs, and retail bottle shops.
+        </p>
+      </div>
+
+      <div class="industries-deck">
+        <!-- 1: Bars and Restaurants -->
+        <div class="industry-tile reveal reveal-delay-1" data-open-demo-modal tabindex="0" role="button" aria-label="Learn more about Bars and Restaurants solutions">
+          <img src="assets/bar-ambience.jpg" alt="Bars and Restaurants – WE SCAN solution" width="400" height="520">
+          <div class="industry-tile-overlay">
+            <span class="industry-tile-pill">High Volume</span>
+            <h3 class="industry-tile-title">Bars and Restaurants</h3>
+            <p class="industry-tile-sub">Tableside &amp; bar verification with native POS ordering sync.</p>
+          </div>
+        </div>
+
+        <!-- 2: Nightclubs and Entertainment Venues -->
+        <div class="industry-tile reveal reveal-delay-2" data-open-demo-modal tabindex="0" role="button" aria-label="Learn more about Nightclubs and Venues solutions">
+          <img src="assets/clinking-glasses.jpg" alt="Nightclubs and Entertainment Venues" width="400" height="520">
+          <div class="industry-tile-overlay">
+            <span class="industry-tile-pill">Fast Door Queue</span>
+            <h3 class="industry-tile-title">Nightclubs and Entertainment Venues</h3>
+            <p class="industry-tile-sub">Fast door security scanning keeping lines moving rapidly.</p>
+          </div>
+        </div>
+
+        <!-- 3: Private Clubs -->
+        <div class="industry-tile reveal reveal-delay-3" data-open-demo-modal tabindex="0" role="button" aria-label="Learn more about Private Clubs solutions">
+          <img src="assets/private-club.png" alt="Private Clubs – dry county compliance" width="400" height="520">
+          <div class="industry-tile-overlay">
+            <span class="industry-tile-pill">Dry Jurisdictions</span>
+            <h3 class="industry-tile-title">Private Clubs</h3>
+            <p class="industry-tile-sub">Guest roster compliance logs and automated regulatory reports.</p>
+          </div>
+        </div>
+
+        <!-- 4: Liquor Stores and Retailers -->
+        <div class="industry-tile reveal reveal-delay-2" data-open-demo-modal tabindex="0" role="button" aria-label="Learn more about Liquor Stores and Retailers solutions">
+          <img src="assets/liquor-store.jpg" alt="Liquor Stores and Retailers" width="400" height="520">
+          <div class="industry-tile-overlay">
+            <span class="industry-tile-pill">Checkout Speed</span>
+            <h3 class="industry-tile-title">Liquor Stores and Retailers</h3>
+            <p class="industry-tile-sub">High-speed register checks protecting retail licenses from stings.</p>
+          </div>
+        </div>
+
+        <!-- 5: Other Age-Restricted Businesses -->
+        <div class="industry-tile reveal reveal-delay-3" data-open-demo-modal tabindex="0" role="button" aria-label="Learn more about Other Age-Restricted Businesses">
+          <img src="assets/glass-bottles-beer-with-glass-ice-dark-background-scaled.jpg" alt="Other Age-Restricted Businesses" width="400" height="520">
+          <div class="industry-tile-overlay">
+            <span class="industry-tile-pill">High Compliance</span>
+            <h3 class="industry-tile-title">Other Age-Restricted Businesses</h3>
+            <p class="industry-tile-sub">Tobacco, convenience, specialty retailers, and event venues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: STATS BAND – Business Impact (Directly Below Business Types)
+       Stats: 500+ Locations | 10M+ Scans Processed | 3x Faster Verification
+       NOTE: Illustrative wireframe placeholders for design demonstration.
+       ========================================================================= -->
+  <section class="stats-band-section" id="stats">
+    <div class="elementor-container">
+      <!-- Illustrative demo figures for wireframe design: easy to update with production enterprise data -->
+      <div class="stats-band-card reveal">
+        <div class="stats-band-grid">
+          <!-- Stat 1: Locations -->
+          <div class="stat-column">
+            <div class="stat-number-box">
+              <span class="stat-number">500+</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-title">Locations Supported</h3>
+              <p class="stat-desc">Multi-unit hospitality groups and independent venues actively protected nationwide.</p>
+            </div>
+          </div>
+
+          <!-- Stat 2: Scans Processed -->
+          <div class="stat-column">
+            <div class="stat-number-box">
+              <span class="stat-number">10M+</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-title">Scans Processed</h3>
+              <p class="stat-desc">Total patron IDs and age checks validated without interrupting checkout speed.</p>
+            </div>
+          </div>
+
+          <!-- Stat 3: Verification Speed -->
+          <div class="stat-column">
+            <div class="stat-number-box">
+              <span class="stat-number stat-highlight">3x</span>
+              <span class="stat-suffix">Faster</span>
+            </div>
+            <div class="stat-info">
+              <h3 class="stat-title">Verification Speed</h3>
+              <p class="stat-desc">Accelerated verification compared against manual DOB calculation by eye.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-disclaimer">
+          <span>* Illustrative performance placeholders for wireframe evaluation. Verified enterprise metrics will be inserted prior to deployment.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: SOLUTIONS – Core Platform Services (3 Top + 2 Bottom Centered)
        ========================================================================= -->
   <section class="solutions-section" id="solutions">
-
-
     <div class="elementor-container">
       <div class="section-header reveal">
         <span class="section-tag">Core Platform Solutions</span>
         <h2 class="section-title">One Platform. Multiple Ways to Protect Your Business.</h2>
         <p class="section-subtitle">
-          Discover solutions designed to simplify age verification, responsible service and compliance across your
-          business.
+          Discover solutions designed to simplify age verification, responsible service and compliance across your business.
         </p>
       </div>
 
@@ -482,89 +648,181 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 5: HOW WE SCAN WORKS – 4-Step Process
+       SECTION 8: THREE-STEP WORKFLOW – 01. Connect | 02. Scan | 03. Serve
+       Simplified 3-step workflow (Monitoring incorporated into SERVE step)
        ========================================================================= -->
   <section class="workflow-section" id="how-it-works">
-
-
     <div class="elementor-container">
       <div class="section-header reveal">
-        <span class="section-tag">Operational Process</span>
+        <span class="section-tag">How WE SCAN Works</span>
         <h2 class="section-title">Simple Verification. Smarter Operations.</h2>
         <p class="section-subtitle">
-          See how easily WE SCAN embeds into everyday staff workflows without slowing lines, frustrating customers, or
-          requiring extra training.
+          See how easily WE SCAN embeds into everyday staff workflows without slowing lines, frustrating customers, or requiring extra training.
         </p>
       </div>
 
-      <div class="workflow-grid">
-        <!-- Step 1 -->
-        <div class="workflow-step reveal reveal-delay-1">
-          <div class="step-bubble">
-            <span class="step-number">1</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="4" width="18" height="16" rx="2" />
-              <line x1="7" y1="8" x2="17" y2="8" />
-              <line x1="7" y1="12" x2="17" y2="12" />
-              <line x1="7" y1="16" x2="13" y2="16" />
-            </svg>
+      <div class="workflow-three-grid">
+        <!-- Step 01: CONNECT -->
+        <div class="workflow-step-card reveal reveal-delay-1">
+          <div class="step-card-top">
+            <span class="step-num-badge">01</span>
+            <div class="step-icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+            </div>
           </div>
-          <h3 class="step-title">Scan the ID</h3>
-          <p class="step-text">Staff scan government IDs or mobile driver's licenses via POS station, Toast Go® 3, or
-            handheld scanner.</p>
+          <h3 class="step-title">Connect</h3>
+          <p class="step-desc">
+            Connect WE SCAN with supported POS platforms including Toast, Aloha and Oracle MICROS.
+          </p>
+          <div class="step-pill">Zero Extra Hardware</div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="workflow-step reveal reveal-delay-2">
-          <div class="step-bubble">
-            <span class="step-number">2</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
-            </svg>
+        <!-- Step 02: SCAN -->
+        <div class="workflow-step-card reveal reveal-delay-2">
+          <div class="step-card-top">
+            <span class="step-num-badge">02</span>
+            <div class="step-icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <line x1="7" y1="8" x2="17" y2="8" />
+                <line x1="7" y1="12" x2="17" y2="12" />
+                <line x1="7" y1="16" x2="13" y2="16" />
+              </svg>
+            </div>
           </div>
-          <h3 class="step-title">Verify Age</h3>
-          <p class="step-text">Instant DOB calculation and age confirmation in under one second. Eliminates manual math
-            and guesswork entirely.</p>
+          <h3 class="step-title">Scan</h3>
+          <p class="step-desc">
+            Scan customer identification directly through the connected POS workflow.
+          </p>
+          <div class="step-pill">Sub-Second DOB Calculation</div>
         </div>
 
-        <!-- Step 3 -->
-        <div class="workflow-step reveal reveal-delay-3">
-          <div class="step-bubble">
-            <span class="step-number">3</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
+        <!-- Step 03: SERVE (Incorporating Operational Monitoring) -->
+        <div class="workflow-step-card reveal reveal-delay-3">
+          <div class="step-card-top">
+            <span class="step-num-badge">03</span>
+            <div class="step-icon-bubble">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+            </div>
           </div>
-          <h3 class="step-title">Support Responsible Service</h3>
-          <p class="step-text">Enforces corporate policy thresholds, tracks consumption pace, and provides proactive
-            risk alerts in real-time.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="workflow-step reveal reveal-delay-4">
-          <div class="step-bubble">
-            <span class="step-number">4</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg>
-          </div>
-          <h3 class="step-title">Manage &amp; Monitor</h3>
-          <p class="step-text">Centralized cloud dashboard delivers real-time visibility, affirmative defense logs, and
-            multi-unit oversight.</p>
+          <h3 class="step-title">Serve &amp; Monitor</h3>
+          <p class="step-desc">
+            Keep service moving while supporting responsible service policies and operational monitoring.
+          </p>
+          <div class="step-pill">Audit Trail &amp; Risk Oversight</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 6: BUSINESS BENEFITS – 6 Benefit Cards
+       SECTION 9: REAL PRODUCT DEMONSTRATION VIDEO – 60–90 Seconds
+       Two-column layout: 16:9 Video Player (Left) + Highlights & CTA (Right)
+       ========================================================================= -->
+  <section class="demo-video-section" id="demo-video">
+    <div class="elementor-container">
+      <div class="demo-video-split-grid">
+        <!-- Left Column: 16:9 Video Player Block -->
+        <div class="demo-video-player-col reveal">
+          <div class="demo-video-frame" id="demoVideoContainer">
+            <video class="demo-video-element" id="productDemoVideo" poster="assets/pos-scan.jpg" preload="metadata" playsinline>
+              <source src="assets/hero-video.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <!-- Overlay Play Controller -->
+            <div class="demo-video-overlay" id="demoVideoOverlay">
+              <button class="demo-play-btn" id="demoPlayBtn" aria-label="Play Product Demonstration Video">
+                <span class="play-pulse-ring"></span>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+              <div class="demo-video-badge-group">
+                <span class="demo-time-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  60–90s Demo (1:18)
+                </span>
+                <span class="demo-device-badge">Toast Go® 3 Verified Workflow</span>
+              </div>
+            </div>
+          </div>
+          <div class="demo-video-caption">
+            <span class="caption-dot"></span>
+            <span>Real POS environment demo showing barcode scan, age check and checkout sync</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Narrative, 3 Highlights & CTA -->
+        <div class="demo-video-content reveal reveal-delay-2">
+          <span class="section-tag">Product Demonstration</span>
+          <h2 class="demo-video-title">See WE SCAN in Action.</h2>
+          <p class="demo-video-lead">
+            Discover how WE SCAN connects with your POS, scans identification and helps your team maintain responsible service without slowing down the customer experience.
+          </p>
+
+          <ul class="demo-highlights-list">
+            <li class="demo-highlight-item">
+              <span class="demo-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <div class="demo-highlight-text">
+                <strong>Connect directly with supported POS platforms.</strong>
+                Integrate directly into Toast, Aloha and Oracle MICROS with zero cumbersome third-party hardware.
+              </div>
+            </li>
+            <li class="demo-highlight-item">
+              <span class="demo-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <div class="demo-highlight-text">
+                <strong>Scan identification quickly at the point of sale.</strong>
+                Parse 2D PDF417 barcodes and verify customer age in under a second with zero mental math or server guesswork.
+              </div>
+            </li>
+            <li class="demo-highlight-item">
+              <span class="demo-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <div class="demo-highlight-text">
+                <strong>Support responsible service and operational monitoring.</strong>
+                Apply drink limit alerts, prevent over-consumption, and maintain an immutable audit trail for affirmative defense.
+              </div>
+            </li>
+          </ul>
+
+          <div class="demo-video-actions">
+            <a href="#contact" class="btn btn-primary btn-lg" data-open-demo-modal>Request a Demo</a>
+            <button type="button" class="btn btn-outline btn-lg" id="triggerDemoVideoBtn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="margin-right: 6px;">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Watch Video (1:18)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 10: BUSINESS BENEFITS – 6 Benefit Cards
        ========================================================================= -->
   <section class="benefits-section" id="benefits">
-
-
     <div class="elementor-container">
       <div class="section-header reveal">
         <span class="section-tag">Business Value</span>
@@ -653,7 +911,7 @@
             </svg>
           </div>
           <h3 class="benefit-heading">POS &amp; Device Integration</h3>
-          <p class="benefit-text">Runs seamlessly inside Toast, NCR Voyix, and Oracle MICROS, or on standalone
+          <p class="benefit-text">Runs seamlessly inside Toast, NCR Voyix Aloha, and Oracle MICROS, or on standalone
             ruggedized mobile scanners.</p>
         </div>
       </div>
@@ -661,12 +919,10 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 7: SEAMLESS ARCHITECTURE – Toast Go 3 Showcase
+       SECTION 11: SEAMLESS ARCHITECTURE – Toast Go 3 Showcase
        Toast Go 3 image displayed fully with object-fit: contain – no cropping
        ========================================================================= -->
   <section class="integrations-showcase-section" id="integrations">
-
-
     <div class="elementor-container">
       <div class="showcase-split-grid">
         <!-- Left: Product & POS Integration Narrative -->
@@ -745,95 +1001,19 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 8: INDUSTRIES & BUSINESS ENVIRONMENTS
-       ========================================================================= -->
-  <section class="industries-section" id="industries">
-
-
-    <div class="elementor-container">
-      <div class="section-header reveal">
-        <span class="section-tag">Tailored Environments</span>
-        <h2 class="section-title">Built for Every Age-Restricted Business.</h2>
-        <p class="section-subtitle">
-          Engineered for high-volume dining, fast-paced nightlife door queues, private clubs, and retail bottle shops.
-        </p>
-      </div>
-
-      <div class="industries-deck">
-        <!-- Industry 1: Bars & Restaurants -->
-        <div class="industry-tile reveal reveal-delay-1"
-          onclick="document.querySelector('[data-open-demo-modal]').click()">
-          <img src="assets/bar-ambience.jpg" alt="Bars and Restaurants – WE SCAN solution" width="300" height="400">
-          <div class="industry-tile-overlay">
-            <h3 class="industry-tile-title">Bars &amp; Restaurants</h3>
-            <p class="industry-tile-sub">Tableside &amp; bar verification with native POS ordering sync.</p>
-          </div>
-        </div>
-
-        <!-- Industry 2: Nightclubs & Entertainment -->
-        <div class="industry-tile reveal reveal-delay-2"
-          onclick="document.querySelector('[data-open-demo-modal]').click()">
-          <img src="assets/clinking-glasses.jpg" alt="Nightclubs and Entertainment Venues" width="300" height="400">
-          <div class="industry-tile-overlay">
-            <h3 class="industry-tile-title">Nightclubs &amp; Venues</h3>
-            <p class="industry-tile-sub">Fast door security scanning keeping lines moving rapidly.</p>
-          </div>
-        </div>
-
-        <!-- Industry 3: Private Clubs -->
-        <div class="industry-tile reveal reveal-delay-3"
-          onclick="document.querySelector('[data-open-demo-modal]').click()">
-          <img src="assets/private-club.png" alt="Private Clubs – dry county jurisdiction compliance" width="300"
-            height="400">
-          <div class="industry-tile-overlay">
-            <h3 class="industry-tile-title">Private Clubs</h3>
-            <p class="industry-tile-sub">Guest roster compliance logs in dry county jurisdictions.</p>
-          </div>
-        </div>
-
-        <!-- Industry 4: Liquor Stores & Retailers -->
-        <div class="industry-tile reveal reveal-delay-2"
-          onclick="document.querySelector('[data-open-demo-modal]').click()">
-          <img src="assets/liquor-store.jpg" alt="Liquor Stores and Age-Restricted Retailers" width="300" height="400">
-          <div class="industry-tile-overlay">
-            <h3 class="industry-tile-title">Liquor Stores</h3>
-            <p class="industry-tile-sub">High-speed register checks protecting retail licenses from stings.</p>
-          </div>
-        </div>
-
-        <!-- Industry 5: Age-Restricted Retail -->
-        <div class="industry-tile reveal reveal-delay-3"
-          onclick="document.querySelector('[data-open-demo-modal]').click()">
-          <img src="assets/glass-bottles-beer-with-glass-ice-dark-background-scaled.jpg"
-            alt="Age-Restricted Retail – tobacco, specialty products" width="300" height="400">
-          <div class="industry-tile-overlay">
-            <h3 class="industry-tile-title">Age-Restricted Retail</h3>
-            <p class="industry-tile-sub">Tobacco, convenience, and specialty sales verification.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 9: TESTIMONIALS – "What Our Clients Say"
+       SECTION 12: TESTIMONIALS – "What Our Clients Say"
        White cards on deep navy – maximum contrast, clearly readable text
-       NOTE: "Client Feedback" section tag used (subtitle sentence removed per request)
        ========================================================================= -->
   <section class="testimonials-section" id="testimonials">
-
-
     <div class="elementor-container">
       <div class="section-header on-dark reveal">
         <span class="section-tag">Client Feedback</span>
         <h2 class="section-title">What Our Clients Say.</h2>
-        <!-- "Client Feedback" subtitle sentence removed per user request -->
       </div>
 
       <div class="testimonials-grid">
         <!-- Testimonial 1: Flamingo Bowl -->
         <div class="testimonial-card reveal reveal-delay-1">
-          <!-- White card: testimonial-quote is dark (#1F2937) on white background – excellent contrast -->
           <blockquote class="testimonial-quote">
             "WE SCAN makes it easier for the bartender by making the scanning much faster and more efficient. It also
             provides the extra protection in case something bad does happen."
@@ -872,11 +1052,9 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 10: REQUEST A DEMO – Conversion Section
+       SECTION 13: REQUEST A DEMO – Final Conversion Section
        ========================================================================= -->
   <section class="conversion-section" id="contact">
-
-
     <div class="elementor-container">
       <div class="conversion-split-grid">
         <!-- Left: Value Proposition -->
@@ -895,8 +1073,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </span>
-              <div><strong>Live Custom Demo:</strong> Tailored walkthrough integrated with your specific POS setup.
-              </div>
+              <div><strong>Live Custom Demo:</strong> Tailored walkthrough integrated with your specific POS setup.</div>
             </li>
             <li class="perk-item">
               <span class="perk-check">
@@ -904,8 +1081,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </span>
-              <div><strong>No Hardware Lock-in:</strong> Works with existing Toast Go® 3 or compact Android scanners.
-              </div>
+              <div><strong>No Hardware Lock-in:</strong> Works with existing Toast Go® 3 or compact Android scanners.</div>
             </li>
             <li class="perk-item">
               <span class="perk-check">
@@ -981,7 +1157,7 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 11: FOOTER
+       SECTION 14: FOOTER
        ========================================================================= -->
   <footer class="site-footer">
     <div class="elementor-container">
@@ -1015,9 +1191,11 @@
           <h4 class="footer-heading">Company</h4>
           <ul class="footer-links-list">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#benefits">About Us</a></li>
+            <li><a href="#pos-integrations">POS Integrations</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#demo-video">Product Demo</a></li>
             <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#integrations">Integration Partners</a></li>
             <li><a href="https://www.wescanids.com/blog/" target="_blank">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="https://app.wescanids.com/" target="_blank">Customer Login</a></li>
@@ -1071,6 +1249,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- =========================================================================
+       PERSISTENT STICKY REQUEST A DEMO CTA (Right side desktop / Floating bottom mobile)
+       ========================================================================= -->
+  <aside class="sticky-demo-cta" id="stickyDemoCta" aria-label="Quick Demo Request">
+    <button type="button" class="sticky-demo-btn" data-open-demo-modal aria-label="Request a Demo">
+      <span class="sticky-demo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+      </span>
+      <span class="sticky-demo-text">Request a Demo</span>
+    </button>
+  </aside>
 
   <!-- =========================================================================
        INTERACTIVE DEMO MODAL POPUP

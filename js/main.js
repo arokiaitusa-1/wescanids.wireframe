@@ -1,6 +1,6 @@
 /**
- * WE SCAN – Premium Homepage Interactive Controller (Version 3)
- * Elementor Blueprint Inspector + Scroll Animations
+ * WE SCAN – Premium Homepage Interactive Controller (Version 4)
+ * Handles Hero Video, Demo Video Player, Modals, Sticky CTA & Scroll Observers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,7 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   openModalButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.preventDefault();
+      // If inside an anchor tag that triggers modal, prevent default jump
+      if (btn.tagName === 'A' || btn.tagName === 'BUTTON' || btn.closest('[data-open-demo-modal]')) {
+        e.preventDefault();
+      }
       openModal();
     });
   });
@@ -73,22 +76,64 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ─────────────────────────────────────────────────────────
-  // 4. Elementor Blueprint Inspector Toggle
+  // 4. Hero Video Autoplay Assurance
   // ─────────────────────────────────────────────────────────
-  const toggleBlueprintBtn = document.getElementById('toggleBlueprintBtn');
-  let blueprintsVisible = false;
+  const heroVideo = document.getElementById('heroBgVideo');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay policy prevented playback, poster image fallback is visible
+        console.info('Hero video autoplay fallback active.');
+      });
+    }
+  }
 
-  toggleBlueprintBtn?.addEventListener('click', () => {
-    blueprintsVisible = !blueprintsVisible;
-    document.body.classList.toggle('show-blueprints', blueprintsVisible);
-    toggleBlueprintBtn.classList.toggle('active', blueprintsVisible);
-    toggleBlueprintBtn.innerHTML = blueprintsVisible
-      ? `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Hide Elementor Specs`
-      : `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Elementor Structure Specs`;
+  // ─────────────────────────────────────────────────────────
+  // 5. Real Product Demonstration Video Section Controller
+  // ─────────────────────────────────────────────────────────
+  const demoVideoContainer = document.getElementById('demoVideoContainer');
+  const productDemoVideo = document.getElementById('productDemoVideo');
+  const demoPlayBtn = document.getElementById('demoPlayBtn');
+  const triggerDemoVideoBtn = document.getElementById('triggerDemoVideoBtn');
+
+  const startDemoVideo = () => {
+    if (!productDemoVideo) return;
+    demoVideoContainer?.classList.add('is-playing');
+    productDemoVideo.controls = true;
+    productDemoVideo.play().catch(err => {
+      console.warn('Video play prevented:', err);
+    });
+  };
+
+  demoPlayBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    startDemoVideo();
   });
 
+  triggerDemoVideoBtn?.addEventListener('click', () => {
+    demoVideoContainer?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(startDemoVideo, 400);
+  });
+
+  if (productDemoVideo) {
+    productDemoVideo.addEventListener('pause', () => {
+      if (productDemoVideo.currentTime < productDemoVideo.duration && !productDemoVideo.seeking) {
+        demoVideoContainer?.classList.remove('is-playing');
+        productDemoVideo.controls = false;
+      }
+    });
+
+    productDemoVideo.addEventListener('ended', () => {
+      demoVideoContainer?.classList.remove('is-playing');
+      productDemoVideo.controls = false;
+      productDemoVideo.load(); // Reset to poster
+    });
+  }
+
   // ─────────────────────────────────────────────────────────
-  // 5. Scroll Reveal Animations via IntersectionObserver
+  // 6. Scroll Reveal Animations via IntersectionObserver
   // ─────────────────────────────────────────────────────────
   const revealElements = document.querySelectorAll('.reveal');
 
@@ -97,22 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target); // animate only once
+          revealObserver.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback: show all immediately if IntersectionObserver unavailable
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
 
   // ─────────────────────────────────────────────────────────
-  // 6. Interactive Demo Form Submit Handler
+  // 7. Interactive Demo Form Submit Handler
   // ─────────────────────────────────────────────────────────
   const demoForms = document.querySelectorAll('form[name="demo-request"]');
   demoForms.forEach(form => {
@@ -134,21 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.disabled = false;
         }
         closeModal();
-      }, 800);
+      }, 700);
     });
   });
 
   // ─────────────────────────────────────────────────────────
-  // 7. Active Nav Link on Scroll
+  // 8. Active Nav Link on Scroll
   // ─────────────────────────────────────────────────────────
-  const sections = document.querySelectorAll('section[id], header[id]');
+  const trackSections = document.querySelectorAll('section[id], header[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   const activateNavLink = () => {
     let currentId = '';
-    sections.forEach(section => {
+    trackSections.forEach(section => {
       const top = section.getBoundingClientRect().top;
-      if (top <= 100) {
+      if (top <= 140) {
         currentId = section.id;
       }
     });
