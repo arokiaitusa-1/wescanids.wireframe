@@ -2030,11 +2030,32 @@ section {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Hero Video Background Enhancements
+   Hero Video Background Enhancements – Reduced Dark Overlay (~50%)
    -------------------------------------------------------------------------- */
+.hero-bg-media img,
+.hero-bg-media video {
+  filter: brightness(0.72) saturate(0.95);
+}
+
 .hero-bg-video {
   pointer-events: none;
   user-select: none;
+}
+
+/* Multi-layer gradient overlay for depth – reduced to ~50% dark overlay */
+.hero-overlay {
+  background:
+    linear-gradient(105deg, rgba(6, 10, 20, 0.65) 0%, rgba(6, 10, 20, 0.42) 50%, rgba(6, 10, 20, 0.20) 100%),
+    linear-gradient(180deg, rgba(6, 10, 20, 0.0) 45%, rgba(6, 10, 20, 0.45) 100%);
+}
+
+.hero-title {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
 }
 
 /* --------------------------------------------------------------------------
@@ -2106,10 +2127,10 @@ section {
 }
 
 .pos-platform-logo-wrap img {
-  height: 120px;
-  max-height: 120px;
-  max-width: 100%;
+  max-height: 110px;
+  max-width: 240px;
   width: auto;
+  height: auto;
   object-fit: contain;
   transition: transform var(--trans-smooth);
 }
@@ -2162,7 +2183,8 @@ section {
   border: 1px solid rgba(239, 68, 68, 0.22);
 }
 
-.pos-badge-aloha {
+.pos-badge-aloha,
+.pos-badge-ncr {
   background: rgba(2, 132, 199, 0.08);
   color: #0369A1;
   border: 1px solid rgba(2, 132, 199, 0.22);
@@ -2785,8 +2807,10 @@ section {
   }
 
   .pos-platform-logo-wrap img {
-    height: 110px;
-    max-height: 120px;
+    max-height: 100px;
+    max-width: 220px;
+    width: auto;
+    height: auto;
   }
 
   .stats-band-grid {
